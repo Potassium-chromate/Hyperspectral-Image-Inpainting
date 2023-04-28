@@ -39,7 +39,7 @@ To adjust the training and testing data, you can modify the following variables:
 - `corruption_level`: Controls the percentage of pixels to set to 0 when corrupting the images.
 - `arg_factor`: Controls the number of augmented samples generated for each image in the dataset.
 
-For example, to increase the corruption level to 95% and the augmentation factor to 25:
+For example, to increase the corruption level to 95% and the augmentation factor to 25:  
 And test images do not need augmentation, so the `arg_factor` remain as 1.
 ```python
 train_corrupt , train_complete = add_noise(train_img, 0.95, 25)
