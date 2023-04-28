@@ -77,3 +77,8 @@ The combined loss function used in this script is a linear combination of Mean S
 - Perform data normalization or other preprocessing techniques to improve model performance.
 - Implement early stopping or learning rate scheduling to improve training efficiency and prevent overfitting.
 - Experiment with different loss functions or combination of loss functions to further optimize the model's performance.
+
+### Recover rate
+- **Recovery rate**:  that can describe how much data has been recovered in the inpainting process.  
+- Recovery rate = `val_ratio` *  `corruption_level` * 100  
+- In the example, Recovery rate = 0.65 * 0.65 * 100 = 42.25%   
