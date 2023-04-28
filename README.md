@@ -25,6 +25,11 @@ file_name  = "path/to/your/data.mat"
 python hyperspectral_inpainting.py
 ```
 
+## Preprocessing
+The input hyperspectral images have a shape of (150, 150). In order to perform convolution and upsampling operations effectively, each side of the image should be a multiple of 8. This is because the specific architecture used in this code involves multiple downsampling (using MaxPooling2D) and upsampling (using UpSampling2D) layers, which require dimensions that are divisible by the downsampling/upsampling factors.
+
+To achieve this, we pad each side of the input image by 1 pixel, resulting in a new image shape of (152, 152). Padding is done using the `np.pad()` function with a `pad_width` of 1 and a constant value of 0. This ensures that the dimensions of the image are compatible with the convolution and upsampling operations in the model while minimizing the impact of padding on the inpainting process.
+
 ## Algorithm Overview
 The script is based on a U-Net architecture, which is commonly used for image inpainting tasks. The algorithm performs the following steps:
 1. Load and preprocess the hyperspectral data.
