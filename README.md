@@ -65,7 +65,7 @@ The U-Net architecture used in this script consists of an encoder (contraction) 
 - **Bottom layer**: After the encoder, there is a bottom layer containing 3 Convolutional layers, each followed by a Batch Normalization layer and a Leaky ReLU activation function.
 - **Decoder (expansion) path**: The decoder path consists of 3 blocks. Each block has an UpSampling2D layer followed by a Convolutional layer and a concatenation operation with the corresponding layer from the encoder path. This is followed by 2 Convolutional layers, each with a Batch Normalization layer and a Leaky ReLU activation function.
 - **Output layer**: The output layer is a Conv2D layer with a sigmoid activation function to produce the inpainted image.
-![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/picture/U-net.png)
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/U-net.png)
 
 ### Combined Loss Function
 The combined loss function used in this script is a linear combination of Mean Squared Error (MSE) and Structural Similarity Index Measure (SSIM). This helps the model to focus on both pixel-level reconstruction as well as preserving structural information in the images. The weighting factor `alpha` can be adjusted to control the trade-off between MSE and SSIM.
