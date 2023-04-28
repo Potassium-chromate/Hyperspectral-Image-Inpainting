@@ -38,6 +38,7 @@ The script is based on a U-Net architecture, which is commonly used for image in
 To adjust the training and testing data, you can modify the following variables:
 - `corruption_level`: Controls the percentage of pixels to set to 0 when corrupting the images.
 - `arg_factor`: Controls the number of augmented samples generated for each image in the dataset.
+- `val_ratio`: The variable represents the proportion of data that will be used for testing.For example, if you set `val_ratio` to 0.8, 80% of the data will be used for testing, and the remaining 20% will be used for training.
 
 For example, to increase the corruption level to 95% and the augmentation factor to 25:  
 And test images do not need augmentation, so the `arg_factor` remain as 1.
@@ -54,6 +55,8 @@ To adjust the number of training epochs and batch size, you can modify the follo
 ```python
 model.fit(train_corrupt, train_complete, epochs=15, batch_size=32, verbose=1)
 ```
+
+
 
 ## Additional Information
 ### Model Architecture
