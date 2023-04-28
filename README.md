@@ -1,5 +1,6 @@
 # Hyperspectral Image Inpainting
 
+## Purposes
 This is a Python script to inpaint hyperspectral images of size (150,150,183) using a U-Net based architecture.
 
 ## Requirements
@@ -82,3 +83,6 @@ The combined loss function used in this script is a linear combination of Mean S
 - **Recovery rate**:  that can describe how much data has been recovered in the inpainting process.  
 - Recovery rate = `val_ratio` *  `corruption_level` * 100  
 - In the example, Recovery rate = 0.65 * 0.65 * 100 = 42.25%   
+
+## Result
+![Alt Text]()
