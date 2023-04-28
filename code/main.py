@@ -158,8 +158,11 @@ if __name__ == "__main__":
         images.append(img)
     images = np.array(images)
     
+    # Set the validation ratio, meaning the ratio of the data will be used for testing
+    val_ratio = 0.8
+    
     #choose which channel to be test data
-    test_indices = np.random.randint(0, height, 160)
+    test_indices = np.random.randint(0, height, int(height*val_ratio))
     # Create an array of all indices
     all_indices = np.arange(height)
     # Remove test indices to get train indices
@@ -169,7 +172,7 @@ if __name__ == "__main__":
     train_img = images[train_indices,:,:]
     
     train_corrupt , train_complete = add_noise(train_img,0.9,22)
-    test_corrupt , test_complete = add_noise(test_img,0.6,1)
+    test_corrupt , test_complete = add_noise(test_img,0.9,1)
     
     #train model
     model.fit(train_corrupt, train_complete, epochs=15, batch_size=32, verbose=1)
