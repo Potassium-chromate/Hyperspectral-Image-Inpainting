@@ -33,6 +33,7 @@ The script is based on a U-Net architecture, which is commonly used for image in
 5. Train the model on the corrupted training images.
 6. Test the model on the corrupted test images, and compare the predictions with the ground truth.
 7. Display the results for the test images and compute the Root Mean Squared Error (RMSE) for each test image.
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Process.png)
 
 ## Customization
 To adjust the training and testing data, you can modify the following variables:
