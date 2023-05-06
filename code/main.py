@@ -13,7 +13,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def combined_loss(y_true, y_pred, alpha=0.9):
+def combined_loss(y_true, y_pred, alpha=0.88):
     mse_loss = tf.keras.losses.MeanSquaredError()(y_true, y_pred)
     ssim_loss = 1.0 - tf.reduce_mean(tf.image.ssim(y_true, y_pred, max_val=1.0))
     
@@ -24,26 +24,26 @@ def build_generator(input_shape):
     leaky_relu = tf.keras.layers.LeakyReLU()
 
     # Encoder (contraction) path
-    c1 = Conv2D(48, (3, 3), padding='same', dilation_rate=2)(inputs)
+    c1 = Conv2D(64, (3, 3), padding='same', dilation_rate=2)(inputs)
     c1 = BatchNormalization()(c1)
     c1 = leaky_relu(c1)
-    c1 = Conv2D(48, (3, 3), padding='same', dilation_rate=2)(c1)
+    c1 = Conv2D(64, (3, 3), padding='same', dilation_rate=2)(c1)
     c1 = BatchNormalization()(c1)
     c1 = leaky_relu(c1)
     p1 = MaxPooling2D((2, 2))(c1)
 
-    c2 = Conv2D(96, (3, 3), padding='same', dilation_rate=1)(p1)
+    c2 = Conv2D(128, (3, 3), padding='same', dilation_rate=1)(p1)
     c2 = BatchNormalization()(c2)
     c2 = leaky_relu(c2)
-    c2 = Conv2D(96, (3, 3), padding='same', dilation_rate=1)(c2)
+    c2 = Conv2D(128, (3, 3), padding='same', dilation_rate=1)(c2)
     c2 = BatchNormalization()(c2)
     c2 = leaky_relu(c2)
     p2 = MaxPooling2D((2, 2))(c2)
 
-    c3 = Conv2D(192, (3, 3), padding='same', dilation_rate=1)(p2)
+    c3 = Conv2D(256, (3, 3), padding='same', dilation_rate=1)(p2)
     c3 = BatchNormalization()(c3)
     c3 = leaky_relu(c3)
-    c3 = Conv2D(192, (3, 3), padding='same', dilation_rate=1)(c3)
+    c3 = Conv2D(256, (3, 3), padding='same', dilation_rate=1)(c3)
     c3 = BatchNormalization()(c3)
     c3 = leaky_relu(c3)
     p3 = MaxPooling2D((2, 2))(c3)
@@ -61,32 +61,32 @@ def build_generator(input_shape):
 
     # Decoder (expansion) path
     u5 = UpSampling2D((2, 2))(c4)
-    u5 = Conv2D(192, (2, 2), padding='same')(u5)
+    u5 = Conv2D(256, (2, 2), padding='same')(u5)
     u5 = concatenate([u5, c3])
-    c5 = Conv2D(192, (3, 3), padding='same', dilation_rate=1)(u5)
+    c5 = Conv2D(256, (3, 3), padding='same', dilation_rate=1)(u5)
     c5 = BatchNormalization()(c5)
     c5 = leaky_relu(c5)
-    c5 = Conv2D(192, (3, 3), padding='same', dilation_rate=1)(c5)
+    c5 = Conv2D(256, (3, 3), padding='same', dilation_rate=1)(c5)
     c5 = BatchNormalization()(c5)
     c5 = leaky_relu(c5)
 
     u6 = UpSampling2D((2, 2))(c5)
-    u6 = Conv2D(96, (2, 2), padding='same')(u6)
+    u6 = Conv2D(128, (2, 2), padding='same')(u6)
     u6 = concatenate([u6, c2])
-    c6 = Conv2D(96, (3, 3), padding='same', dilation_rate=1)(u6)
+    c6 = Conv2D(128, (3, 3), padding='same', dilation_rate=1)(u6)
     c6 = BatchNormalization()(c6)
     c6 = leaky_relu(c6)
-    c6 = Conv2D(96, (3, 3), padding='same', dilation_rate=1)(c6)
+    c6 = Conv2D(128, (3, 3), padding='same', dilation_rate=1)(c6)
     c6 = BatchNormalization()(c6)
     c6 = leaky_relu(c6)
 
     u7 = UpSampling2D((2, 2))(c6)
-    u7 = Conv2D(48, (2, 2), padding='same')(u7)
+    u7 = Conv2D(64, (2, 2), padding='same')(u7)
     u7 = concatenate([u7, c1])
-    c7 = Conv2D(48, (3, 3), padding='same', dilation_rate=2)(u7)
+    c7 = Conv2D(64, (3, 3), padding='same', dilation_rate=2)(u7)
     c7 = BatchNormalization()(c7)
     c7 = leaky_relu(c7)
-    c7 = Conv2D(48, (3, 3), padding='same', dilation_rate=2)(c7)
+    c7 = Conv2D(64, (3, 3), padding='same', dilation_rate=2)(c7)
     c7 = BatchNormalization()(c7)
     c7 = leaky_relu(c7)
 
@@ -138,7 +138,7 @@ def add_noise(image_data,corruption_level,arg_factor):
 
 if __name__ == "__main__":
     #load .mat file
-    file_name  = "T"
+    file_name  = "C:/Users/88696/Desktop/三下課程/影像處理/project3/Nevada.mat"
     mat_data = scipy.io.loadmat(file_name)
     hyperspectral_data = mat_data['X']
     
@@ -159,7 +159,7 @@ if __name__ == "__main__":
     images = np.array(images)
     
     # Set the validation ratio, meaning the ratio of the data will be used for testing
-    val_ratio = 0.65
+    val_ratio = 0.92
     
     #choose which channel to be test data
     test_indices = np.random.choice(height, int(height*val_ratio), replace=False)
@@ -171,15 +171,15 @@ if __name__ == "__main__":
     test_img = images[test_indices,:,:]
     train_img = images[train_indices,:,:]
     
-    train_corrupt , train_complete = add_noise(train_img,0.65,22)
-    test_corrupt , test_complete = add_noise(test_img,0.65,1)
+    train_corrupt , train_complete = add_noise(train_img,0.97,60)
+    test_corrupt , test_complete = add_noise(test_img,0.97,1)
     
     #train model
     model.fit(train_corrupt, train_complete, epochs=15, batch_size=16, verbose=1, validation_data=(test_corrupt, test_complete))
     
     
     pred = model.predict(test_corrupt)
-    
+    total_rmse = 0
     for j in range(len(test_corrupt)):
         plt.figure(figsize=(12, 4))
 
@@ -207,7 +207,10 @@ if __name__ == "__main__":
         squared_difference = np.square(difference)
         mean_squared_difference = np.mean(squared_difference)
         rmse = np.sqrt(mean_squared_difference)
+        total_rmse += rmse
         
         print("RMSE: ",rmse)
     
-   
+    print("Avg rmse: ",total_rmse/np.shape(pred)[0])
+            
+    
