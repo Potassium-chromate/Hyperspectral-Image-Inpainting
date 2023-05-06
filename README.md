@@ -39,7 +39,7 @@ The script is based on a U-Net architecture, which is commonly used for image in
 5. Train the model on the corrupted training images.
 6. Test the model on the corrupted test images, and compare the predictions with the ground truth.
 7. Display the results for the test images and compute the Root Mean Squared Error (RMSE) for each test image.
-![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Process.png)
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Process.png)  
 
 ## Customization
 To adjust the training and testing data, you can modify the following variables:
@@ -93,3 +93,49 @@ The combined loss function used in this script is a linear combination of Mean S
 ![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Result%201.png)
 ![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Result%202.png)
 ![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Result%203.png)
+
+## Futher test
+
+| category  | quantity| corrupt rate | Avg RMSE  | params used |
+| :----     | :----:  | :----------: | ---:  |----------------:|
+| train     | 55      | 0            |       |                 |
+| test      | 128     | 0.7          |       |                 |
+| total     | 183     | 0.49         | 0.068 | 8,053,105       |
+
+| category  | quantity| corrupt rate | Avg RMSE  | params used |
+| :----     | :----:  | :----------: | ---:  |----------------:|
+| train     | 37      | 0            |       |                 |
+| test      | 152     | 0.7          |       |                 |
+| total     | 183     | 0.56         | 0.039 |   9,592,497     |
+
+| category  | quantity| corrupt rate | Avg RMSE  | params used |
+| :----     | :----:  | :----------: | ---:  |----------------:|
+| train     | 37      | 0            |       |                 |
+| test      | 152     | 0.8          |       |                 |
+| total     | 183     | 0.64         | 0.025 |   9,592,497     |
+
+| category  | quantity| corrupt rate | Avg RMSE  | params used |  
+| :----     | :----:  | :----------: | ---:  |----------------:|
+| train     | 28      | 0            |       |                 |
+| test      | 155     | 0.8          |       |                 |
+| total     | 183     | 0.68         | 0.044 |   9,592,497     |
+
+| category  | quantity| corrupt rate | Avg RMSE  | params used |   
+| :----     | :----:  | :----------: | ---:  |----------------:|
+| train     | 28      | 0            |       |                 |
+| test      | 155     | 0.85         |       |                 |
+| total     | 183     | 0.72         | 0.079 |   9,592,497     |
+
+| category  | quantity| corrupt rate | Avg RMSE  | params used |   
+| :----     | :----:  | :----------: | ---:  |----------------:|
+| train     | 19      | 0            |       |                 |
+| test      | 164     | 0.9          |       |                 |
+| total     | 183     | 0.81         | 0.024 |   10,069,313    |
+
+| category  | quantity| corrupt rate | Avg RMSE  | params used |   
+| :----     | :----:  | :----------: | ---:  |----------------:|
+| train     | 15      | 0            |       |                 |
+| test      | 168     | 0.95         |       |                 |
+| total     | 183     | 0.874        | 0.034 |   10,069,313    |
+
+
