@@ -96,11 +96,21 @@ The combined loss function used in this script is a linear combination of Mean S
 
 ## Futher test
 
-| category  | quantity| corrupt rate | Avg RMSE  | params used |
-| :----     | :----:  | :----------: | ---:  |----------------:|
-| train     | 55      | 0            |       |                 |
-| test      | 128     | 0.7          |       |                 |
-| total     | 183     | 0.49         | 0.068 | 8,053,105       |
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: |
+| train     | 92      | 2024       |0             |           |             |        |
+| test      | 91      |    91      |0.5           |           |             |        |
+| total     | 183     |  2115      |0.25          | 0.0097    | 10,069,313  |   18   |
+
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/25%25.png)
+
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: |
+| train     | 55      | 1210       |0             |           |             |        |
+| test      | 128     |    91      |0.7           |           |             |        |
+| total     | 183     |  1301      |0.49          | 0.054     | 10,069,313  |   97    |
+
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/49%25.png)
 
 | category  | quantity| corrupt rate | Avg RMSE  | params used |
 | :----     | :----:  | :----------: | ---:  |----------------:|
