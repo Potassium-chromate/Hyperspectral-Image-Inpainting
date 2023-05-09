@@ -200,4 +200,18 @@ The combined loss function used in this script is a linear combination of Mean S
 
 ![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/95%25.png)
 
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:| :----: |
+| train     | 4       | 2000       |0             |           |             |        |       |  no    |
+| test      | 179     | 179        |0.975         |           |             |        |       |  no    |
+| total     | 183     | 2179       |0.953         | 0.023     | 10,069,313  |  47.61 | 0.82  |  no    |
 
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/95.3%25.png)
+
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:| :----: |
+| train     | 3       | 2001       |0             |           |             |        |       |  no    |
+| test      | 180     | 180        |0.98          |           |             |        |       |  no    |
+| total     | 183     | 2181       |0.963         | 0.032     | 10,069,313  |  68    | 0.82  |  no    |
+
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/96.3%25.png)
