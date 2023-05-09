@@ -96,62 +96,90 @@ The combined loss function used in this script is a linear combination of Mean S
 
 ## Futher test
 
-| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha |
-| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: |:----: |
-| train     | 92      | 2024       |0             |           |             |        |       |
-| test      | 91      |    91      |0.5           |           |             |        |       |
-| total     | 183     |  2115      |0.25          | 0.0097    | 10,069,313  |   18   | 0.88  |
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: |:----: | :----: |
+| train     | 92      | 2024       |0             |           |             |        |       |  yes   |
+| test      | 91      |    91      |0.5           |           |             |        |       |  yes   |
+| total     | 183     |  2115      |0.25          | 0.0097    | 10,069,313  |   18   | 0.88  |  yes   |
 
 ![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/25%25.png)
 
-| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha |
-| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: |:----: |
-| train     | 55      | 1980       |0             |           |             |        |       |
-| test      | 128     |    91      |0.7           |           |             |        |       |
-| total     | 183     |  2071      |0.49          | 0.008     | 10,069,313  |   16   | 0.88  |
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: |:----: | :----: |
+| train     | 55      | 1980       |0             |           |             |        |       |  yes   |
+| test      | 128     |    91      |0.7           |           |             |        |       |  yes   |
+| total     | 183     |  2071      |0.49          | 0.008     | 10,069,313  |   16   | 0.88  |  yes   |
 
 ![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/49%25.png)
 
-| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha |
-| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: |:----: |
-| train     | 37      | 1998       |0             |           |             |        |       |
-| test      | 146     |  146       |0.7           |           |             |        |       |
-| total     | 183     |  2144      |0.56          | 0.012     | 10,069,313  |   52   | 0.88  |
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: |:----: | :----: |
+| train     | 37      | 1998       |0             |           |             |        |       |  yes   |
+| test      | 146     |  146       |0.7           |           |             |        |       |  yes   |
+| total     | 183     |  2144      |0.56          | 0.012     | 10,069,313  |   52   | 0.88  |  yes   |
 
 ![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/56%25.png)
 
-| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha |
-| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: |:----: |
-| train     | 37      | 1998       |0             |           |             |        |       |
-| test      | 146     |  146       |0.8           |           |             |        |       |
-| total     | 183     |  2144      |0.64          | 0.031     | 10,069,313  |   60   | 0.82  |
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: |:----: | :----: |
+| train     | 37      | 1998       |0             |           |             |        |       |  yes   |
+| test      | 146     |  146       |0.8           |           |             |        |       |  yes   |
+| total     | 183     |  2144      |0.64          | 0.031     | 10,069,313  |   60   | 0.82  |  yes   |
 
 ![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/64%25.png)
 
-| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha |
-| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:|
-| train     | 28      | 2004       |0             |           |             |        |       |
-| test      | 155     | 155        |0.8           |           |             |        |       |
-| total     | 183     | 2159       |0.68          | 0.022     | 10,069,313  |   43   | 0.82  |
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:| :----: |
+| train     | 28      | 2004       |0             |           |             |        |       |  yes   |
+| test      | 155     | 155        |0.8           |           |             |        |       |  yes   |
+| total     | 183     | 2159       |0.68          | 0.022     | 10,069,313  |   43   | 0.82  |  yes   |
 
 ![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/68%25.png)
 
-| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha |
-| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:|
-| train     | 28      | 2004       |0             |           |             |        |       |
-| test      | 155     | 155        |0.85          |           |             |        |       |
-| total     | 183     | 2159       |0.72          | 0.022     | 10,069,313  |   43   | 0.82  |
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:| :----: |
+| train     | 28      | 2004       |0             |           |             |        |       |  yes   |
+| test      | 155     | 155        |0.85          |           |             |        |       |  yes   |
+| total     | 183     | 2159       |0.72          | 0.0088    | 10,069,313  |   24   | 0.82  |  yes   |
 
-| category  | quantity| corrupt rate | Avg RMSE  | params used |   
-| :----     | :----:  | :----------: | ---:  |----------------:|
-| train     | 19      | 0            |       |                 |
-| test      | 164     | 0.9          |       |                 |
-| total     | 183     | 0.81         | 0.024 |   10,069,313    |
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/72%25.png)
 
-| category  | quantity| corrupt rate | Avg RMSE  | params used |   
-| :----     | :----:  | :----------: | ---:  |----------------:|
-| train     | 15      | 0            |       |                 |
-| test      | 168     | 0.95         |       |                 |
-| total     | 183     | 0.874        | 0.034 |   10,069,313    |
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:| :----: |
+| train     | 19      | 2014       |0             |           |             |        |       |  yes   |
+| test      | 164     | 164        |0.9           |           |             |        |       |  yes   |
+| total     | 183     | 2159       |0.81          | 0.0097    | 10,069,313  |   19   | 0.82  |  yes   |
+
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/81%25.png)
+
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:| :----: |
+| train     | 15      | 2010       |0             |           |             |        |       |  yes   |
+| test      | 168     | 168        |0.95          |           |             |        |       |  yes   |
+| total     | 183     | 2178       |0.87          | 0.017     | 10,069,313  |   35   | 0.82  |  yes   |
+
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/87%25.png)
+
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:| :----: |
+| train     | 10      | 2000       |0             |           |             |        |       |  yes   |
+| test      | 173     | 173        |0.95          |           |             |        |       |  yes   |
+| total     | 183     | 2173       |0.90          | 0.032     | 10,069,313  |   68   | 0.82  |  yes   |
+
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/90%25(1).png)
+
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:| :----: |
+| train     | 10      | 2000       |0             |           |             |        |       |  no    |
+| test      | 173     | 173        |0.95          |           |             |        |       |  no    |
+| total     | 183     | 2173       |0.90          | 0.013     | 10,069,313  |   22   | 0.82  |  no    |
+
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/90%25(2).png)
+
+
+
+
+
+
 
 
