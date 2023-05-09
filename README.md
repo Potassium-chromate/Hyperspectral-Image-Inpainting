@@ -90,9 +90,9 @@ The combined loss function used in this script is a linear combination of Mean S
 - In the example, Recovery rate = 0.65 * 0.65 * 100 = 42.25%   
 
 ## Result
-![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Result1.png)
-![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Result2.png)
-![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Result3.png)
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Result1.png)  
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Result2.png)  
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/Result3.png)  
 
 ## Futher test
 
