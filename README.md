@@ -188,10 +188,16 @@ The combined loss function used in this script is a linear combination of Mean S
 | :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:| :----: |
 | train     | 6       | 2004       |0             |           |             |        |       |  no    |
 | test      | 177     | 177        |0.97          |           |             |        |       |  no    |
-| total     | 183     | 2181       |0.938         | 0.017     | 10,069,313  |  35.4  | 0.82  |  no    |
+| total     | 183     | 2181       |0.938         | 0.039     | 10,069,313  |  84.21 | 0.82  |  no    |
 
-![Alt Text]()
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/94%25.png)
 
+| category  | quantity| argumation | corrupt rate | Avg RMSE  | params used | F_norm | alpha | random |
+| :----     | :----:  |:----------:| :----------: | :--:      |:-----------:| :----: | :----:| :----: |
+| train     | 5       | 2000       |0             |           |             |        |       |  no    |
+| test      | 178     | 178        |0.975         |           |             |        |       |  no    |
+| total     | 183     | 2178       |0.948         | 0.027     | 10,069,313  |  58.01 | 0.82  |  no    |
 
+![Alt Text](https://github.com/Potassium-chromate/Hyperspectral-Image-Inpainting/blob/main/pictures/further%20test/95%25.png)
 
 
